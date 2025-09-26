@@ -11,7 +11,7 @@ export default function BannerHome() {
                     </div>
                 </div>
                 <div className="w-[215px] mr-[23px] mt-[40px]">
-                    <img src="demo/image-2.png" alt="nhạc edm" className="w-full h-auto" />
+                    <img src="/demo/image-2.png" alt="nhạc edm" className="w-full h-auto" />
                 </div>
             </div>
         </>
