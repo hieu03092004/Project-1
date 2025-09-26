@@ -1,7 +1,6 @@
 "use client";
 import SongList2 from "@/app/components/song/SongList2";
 import Title from "@/app/components/title/Title";
-import { ISongItem } from "@/app/interfaces/ISongItem";
 import { getSongListWishList } from "@/app/helpers/getSong";
 import { useEffect,useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";

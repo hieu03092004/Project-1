@@ -3,14 +3,15 @@ import FormButton from "@/app/components/Form/FormButton";
 import FormInput from "@/app/components/Form/FormInput";
 import Title from "@/app/components/title/Title";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { authFirebase, dbFirebase } from "@/app/FireBaseConfig";
+import { authFirebase } from "@/app/FireBaseConfig";
 import {useRouter} from "next/navigation";
 export default function LoginPage() {
     const router=useRouter();
-    const handleLogin = (event: any) => {
+    const handleLogin = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const email: string = event.target.email.value;
-        const password: string = event.target.password.value;
+        const target = event.target as HTMLFormElement;
+        const email: string = (target.email as HTMLInputElement).value;
+        const password: string = (target.password as HTMLInputElement).value;
         signInWithEmailAndPassword(authFirebase, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;

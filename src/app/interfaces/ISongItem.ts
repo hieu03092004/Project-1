@@ -3,9 +3,9 @@ export interface ISongItem{
     image:string,
     title:string,
     singer:string,
-    listen?:Number,
+    listen?:number,
     time?:string,
     audio:string,
     className?:string,
-    wishlist:any
+    wishlist?:any
 }

@@ -1,5 +1,5 @@
 export default function Title(props:{
-    text:String,
+    text:string,
     className?:string
 }){
     const {text="",className=""}=props;
